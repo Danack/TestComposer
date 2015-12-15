@@ -1,0 +1,24 @@
+{
+    "name": "danack/composerPerf",
+    "description": "An attempt to gather some metrics for composer",
+    "keywords": ["composer", "performance"],
+
+    "license": "MIT",
+
+    "autoload": {
+        "psr-0": {
+            "FCForms": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { 
+            "PerfTest\\PerfOne\\": "src/PerfOne",
+            "PerfTest\\PerfTwo\\": ["src/PerfTwo", "lib/PerfTwo"]
+        }
+    },
+    "require-dev": {
+    },
+    "require":{
+        "php": ">=5.4"
+    }
+}
