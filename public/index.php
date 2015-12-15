@@ -4,7 +4,7 @@ use Composer\Autoload\ClassLoader;
 
 $autoloader = require __DIR__.'/../vendor/autoload.php';
 
-$optimizeSetting = null;
+$optimizeSetting = "Not recognized";
 
 if (isset($_GET['setting'])) {
     $optimizeSetting = $_GET['setting'];
@@ -40,7 +40,7 @@ if (in_array($test, $tests)) {
     call_user_func($test);
 }
 
-echo "Ok";
+echo "Ok $optimizeSetting";
 
 function check()
 {
@@ -48,7 +48,7 @@ function check()
         echo "opcache_get_status function does not exist";
         return;
     }
-    
+
     $status = opcache_get_status();
 }
 
