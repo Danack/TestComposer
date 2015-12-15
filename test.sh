@@ -1,3 +1,4 @@
+#!/bin/bash
 
 set -x
 
@@ -11,8 +12,6 @@ echo "" > testOutput.txt
 current_pid=$$
 
 echo "current_pid is ${current_pid}"
-
-
 
 for test_setting in "${test_settings[@]}"
 do
@@ -68,12 +67,9 @@ do
 
 done
 
-
 # Kill the PHP server
 # Something is wrong with the PIDs
 #kill "${server_pid}"
-
-
 
 # Debugging for when the server fails to stop.
 # echo "Pid was ${server_pid}"
